@@ -1,15 +1,17 @@
 .container {
-  padding: 0 2rem;
+  padding: 0;
 }
 
 .main {
   min-height: 100vh;
   padding: 4rem 0;
+  margin: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #002f4d;
 }
 
 .footer {
@@ -28,21 +30,12 @@
   flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 6rem;
+  color: #fff;
+  animation: blurin 3s ease infinite;
 }
 
 .title,
@@ -108,9 +101,22 @@
   margin-left: 0.5rem;
 }
 
+@keyframes blurin {
+  0% {
+    filter: blur(0px);
+  }
+
+  50% {
+    filter: blur(16px);
+  }
+
+  100% {
+    filter: blur(0px);
+  }
+}
+
 @media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+  .title {
+    font-size: 3rem;
   }
 }
